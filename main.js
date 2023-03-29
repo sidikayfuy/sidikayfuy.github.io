@@ -1,6 +1,5 @@
 $( document ).ready(function() {
-    window.navigator.vibrate(200);
-    window.navigator.vibrate([200]);
+
     let vb = $('#vb')
     let sb = $('#sb')
     let vibro = $('#vibro')
@@ -72,5 +71,9 @@ $( document ).ready(function() {
         speechSynthesis.cancel()
     })
 
+    $('#vibr').on('click', function (){
+        window.navigator.vibrate(200);
+        window.navigator.vibrate([200]);
+    })
 
 });
