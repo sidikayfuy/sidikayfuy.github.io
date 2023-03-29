@@ -1,0 +1,9 @@
+nav{
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+nav button{
+    margin: 20px;
+}
