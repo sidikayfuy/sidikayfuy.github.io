@@ -1,5 +1,7 @@
 $( document ).ready(function() {
-
+    setTimeout(() => {
+        let voices = window.speechSynthesis.getVoices();
+    });
     let vb = $('#vb')
     let sb = $('#sb')
     let vibro = $('#vibro')
