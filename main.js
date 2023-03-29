@@ -5,7 +5,7 @@ $( document ).ready(function() {
     let vibro = $('#vibro')
     let speech = $('#speech')
 
-    vb.on('click', function (){
+    vb.on('click touchstart', function (){
         if (vibro.is(':hidden')){
             if (speech.is(':visible')){
                 speech.hide()
@@ -17,7 +17,7 @@ $( document ).ready(function() {
         }
     })
 
-    sb.on('click', function (){
+    sb.on('click touchstart', function (){
         if (speech.is(':hidden')){
             if (vibro.is(':visible')){
                 vibro.hide()
@@ -29,7 +29,7 @@ $( document ).ready(function() {
         }
     })
     let recog;
-    $("#startrecog").on('click', function (){
+    $("#startrecog").on('click touchstart', function (){
         $('#stoprecog').attr('disabled', false)
         $('#startrecog').attr('disabled', true)
         recog = new webkitSpeechRecognition;
@@ -47,7 +47,7 @@ $( document ).ready(function() {
         }
     })
 
-    $('#stoprecog').on('click', function (){
+    $('#stoprecog').on('click touchstart', function (){
         $('#stoprecog').attr('disabled', true)
         $('#startrecog').attr('disabled', false)
         $('#recogres').val('');
@@ -55,7 +55,7 @@ $( document ).ready(function() {
         recog = null
     })
 
-    $('#startsyntes').on('click', function (){
+    $('#startsyntes').on('click touchstart', function (){
         let utterance = new SpeechSynthesisUtterance($('#syntes').val());
         utterance.lang = 'ru-RU'
 
@@ -67,11 +67,11 @@ $( document ).ready(function() {
 
     })
 
-    $('#stopsyntes').on('click', function (){
+    $('#stopsyntes').on('click touchstart', function (){
         speechSynthesis.cancel()
     })
 
-    $('#vibr').on('click', function (){
+    $('#vibr').on('click touchstart', function (){
         window.navigator.vibrate(200);
         window.navigator.vibrate([200]);
     })
