@@ -74,7 +74,7 @@ $( document ).ready(function() {
     })
 
     $('#vibr').on('click touchstart', function (){
-        navigator.vibrate([500, 200, 500]);
+        navigator.vibrate([200,100,200,100,200,50,50,50,50,50,50,50,50,50,50]);
     })
 
 });
